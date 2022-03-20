@@ -1,5 +1,6 @@
 from numpy import exp, array, random, dot
-
+import time
+import numpy as np
 
 class NeuralNetwork():
     def __init__(self):
@@ -68,7 +69,12 @@ if __name__ == "__main__":
 
     print ("New synaptic weights after training: ")
     print( neural_network.synaptic_weights)
+    time.sleep(3)
 
-    # Test the neural network with a new situation.
-    print ("Considering new situation [1, 0, 0] -> ?: ")
-    print( neural_network.think(array([1, 0, 0])))
+
+    pp=array([1,1,0])
+
+    p = neural_network.think(pp)
+
+    print(p)
+    time.sleep(5)
